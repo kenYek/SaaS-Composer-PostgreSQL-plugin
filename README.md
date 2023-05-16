@@ -32,3 +32,9 @@ The first parameter in setValue is the data source name, Set in config page.
 Use click event trigger setValue function execute.
 
 ![setting](./readmeImg/setValue.png) 
+
+## Use Variable  
+
+- If variable name is **aaa**.  
+
+    var targets = [{rawSql: "UPDATE \"iot-hub-coldchain\".lujj SET value = "+num+" WHERE c1 = '[[aaa]]'",scDataType: "value",sourceType: "postgres",target: "set",type: "set"}]
