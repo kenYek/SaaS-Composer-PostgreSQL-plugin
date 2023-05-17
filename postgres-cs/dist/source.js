@@ -165,8 +165,8 @@ var compPostgresCs={
       if(row && !row.url) {
          return false;
       }
-      if(row && row.access == 'proxy' && row.sourceurl) {
-        var localhostUrl  = row.sourceurl;
+      if(row && row.access == 'proxy' && row.json_data && row.json_data.sourceurl) {
+        var localhostUrl  = row.json_data.sourceurl;
         var proxyqueryType = '/api/databaseSource/postgres/connect';
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
