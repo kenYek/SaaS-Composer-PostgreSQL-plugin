@@ -16,7 +16,7 @@
     var num = Math.round(Math.random()*50);
     var targets = [
         {
-            rawSql: "UPDATE \"iot-hub-coldchain\".lujj SET value = "+num+" WHERE c1 = 'Cheese'",
+            rawSql: "UPDATE Schemas.Table SET value = "+num+" WHERE c1 = 'Cheese'",
             scDataType: "value",
             sourceType: "postgres",
             target: "set",
@@ -37,4 +37,4 @@ Use click event trigger setValue function execute.
 
 - If variable name is **aaa**.  
 
-    var targets = [{rawSql: "UPDATE \"iot-hub-coldchain\".lujj SET value = "+num+" WHERE c1 = '[[aaa]]'",scDataType: "value",sourceType: "postgres",target: "set",type: "set"}]
+    var targets = [{rawSql: "UPDATE Schemas.Table SET value = "+num+" WHERE c1 = '[[aaa]]'",scDataType: "value",sourceType: "postgres",target: "set",type: "set"}]
