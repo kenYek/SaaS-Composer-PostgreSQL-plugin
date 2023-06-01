@@ -4,7 +4,7 @@ WORKDIR /usr/src/app
 # Install app dependencies
 COPY package*.json ./
 
-RUM npm install
+RUN npm install
 # Bundle app source
 COPY . .
 EXPOSE 3500
